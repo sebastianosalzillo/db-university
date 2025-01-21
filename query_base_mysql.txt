@@ -1,0 +1,19 @@
+SELECT id, name, surname, DATE_FORMAT(date_of_birth, '%Y') AS year_of_birth
+FROM students
+WHERE YEAR(date_of_birth) = 1990
+ORDER BY date_of_birth;
+
+
+
+SELECT *
+FROM courses
+WHERE cfu > 10
+ORDER BY cfu DESC;
+
+
+SELECT 
+    *,
+    TIMESTAMPDIFF(YEAR, date_of_birth, CURDATE()) AS age
+FROM students
+WHERE TIMESTAMPDIFF(YEAR, date_of_birth, CURDATE()) > 30
+ORDER BY age;
