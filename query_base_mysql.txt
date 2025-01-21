@@ -18,3 +18,11 @@ FROM students
 WHERE TIMESTAMPDIFF(YEAR, date_of_birth, CURDATE()) > 30
 ORDER BY age;
      
+
+
+
+
+SELECT *
+FROM `courses`
+WHERE `year` = 1
+AND `period` = 'I semestre';
